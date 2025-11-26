@@ -76,22 +76,56 @@ section h3 {
 }
 
 .participants-list {
-  margin-left: 24px;
+  margin: 0;
   margin-bottom: 8px;
-  padding-left: 18px;
-  list-style-type: disc;
+  padding: 0;
+  list-style: none; /* hide bullets */
 }
 
 .participants-list li {
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: rgba(26, 35, 126, 0.03);
+  margin-bottom: 6px;
   font-size: 15px;
   color: #333;
 }
 
 .participants-none {
-  margin-left: 24px;
+  margin-left: 0;
   color: #888;
   font-style: italic;
+}
+
+.participant-email {
+  word-break: break-word;
+}
+
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.participant-delete:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+
+.participant-delete:focus {
+  outline: 2px solid #c62828;
+  outline-offset: 2px;
 }
 
 .activity-card h4 {
